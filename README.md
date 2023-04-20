@@ -15,12 +15,14 @@ source .cdsbashrc
 ```
 
 ## To run a Cadence tool
-Go to design folder ```cd Sourav/alu_design_2/genus/```
+(Go to design folder eg. ```cd Sourav/alu_design_2/genus/``` . Then invoke particular tool inside that tool-named-folder.)
 
-Open Genus CLI ```/Application/Cadence/GENUS201/bin/genus``` or directly ```genus```
+1. Open NCLaunch GUI ```.............``` or directly ```nclaunch &```
 
-Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
+2. Open Genus CLI ```/Application/Cadence/GENUS201/bin/genus``` or directly ```genus```
 
-Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
+3. Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
+
+4. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
 
 
