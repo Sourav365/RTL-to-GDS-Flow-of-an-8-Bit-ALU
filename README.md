@@ -71,11 +71,9 @@ source .cdsbashrc
 
 1. Open NCLaunch GUI ```.............``` or directly ```nclaunch &```
 
-2. Open Genus CLI ```/Application/Cadence/GENUS201/bin/genus``` or directly ```genus```
+2. Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
 
-3. Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
-
-4. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
+3. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
 
 
 
@@ -95,8 +93,15 @@ source .cdsbashrc
 cd Sourav/alu_design_2/genus/
 /Application/Cadence/GENUS201/bin/genus -legacy_ui
 source ../tcl/alu.tcl
-```#
+```
+
+Click on (+) tab to see schematic of the mapped netlist
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/49667585/233337096-4447da17-22d9-4334-b84e-871d4fecc1db.png">
+
+<img width="487" alt="image" src="https://user-images.githubusercontent.com/49667585/233338045-02285a07-43e2-4274-8597-5bdbafb4bf9a.png">
+
+**Timing**, **Gates**, **Power**, **Area repports** will generate inside _../genus/_ folder.
+Technology mapped "Netlist" and "Constraint" file will be generated.
 
 4. fdg
 5. dfg
