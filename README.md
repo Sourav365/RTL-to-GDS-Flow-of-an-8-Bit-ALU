@@ -80,15 +80,15 @@ source .cdsbashrc
 
 
 ## Steps---->
-0. Start Cadence tools
+### 0. Start Cadence tools
 ```
 cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
 source .cdsbashrc
 ```
-1. Verify RTL design
+### 1. Verify RTL design
 
 
-2. Generate Netlist after synthesys
+### 2. Generate Netlist after synthesys
 ```
 cd Sourav/alu_design_2/genus/
 /Application/Cadence/GENUS201/bin/genus -legacy_ui
@@ -96,13 +96,19 @@ source ../tcl/alu.tcl
 ```
 
 Click on (+) tab to see schematic of the mapped netlist
+
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/49667585/233337096-4447da17-22d9-4334-b84e-871d4fecc1db.png">
 
 <img width="487" alt="image" src="https://user-images.githubusercontent.com/49667585/233338045-02285a07-43e2-4274-8597-5bdbafb4bf9a.png">
 
 **Timing**, **Gates**, **Power**, **Area repports** will generate inside _../genus/_ folder.
+
 Technology mapped "Netlist" and "Constraint" file will be generated.
 
-4. fdg
-5. dfg
-6. dfg
+### 3. fdg
+
+
+### 4. dfg
+
+
+### 5. dfg
