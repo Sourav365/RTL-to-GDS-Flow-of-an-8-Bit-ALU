@@ -26,7 +26,7 @@ Main_Design_Folder
                   --> fsa0m_a_generic_core.lef      + FSA0M_A_GENERIC_CORE_ANT_V55.6.lef
                   --> foa0a_o_t33_generic_cd_io.lef + FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef
     
-    |-> genus --> 
+    |-> genus --> Initially no files
     
     
     |-> innovus --> 
@@ -83,14 +83,19 @@ source .cdsbashrc
 
 ## Steps---->
 0. Start Cadence tools
-```cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
+```
+cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
 source .cdsbashrc
 ```
 1. Verify RTL design
 
 
 2. Generate Netlist after synthesys
-
+```
+cd Sourav/alu_design_2/genus/
+/Application/Cadence/GENUS201/bin/genus -legacy_ui
+source ../tcl/alu.tcl
+```
 
 4. fdg
 5. dfg
