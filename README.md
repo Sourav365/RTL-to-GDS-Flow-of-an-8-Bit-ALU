@@ -16,8 +16,7 @@ Main_Design_Folder
            
     |-> tcl --> tcl_file.tcl
            
-    |-> lib --> generic_core
-            --> generic_core_tt.lib
+    |-> lib --> generic_core_tt.lib
             --> generic_core_ff.lib
             --> generic_core_ss.lib
             
