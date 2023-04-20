@@ -24,12 +24,13 @@ Main_Design_Folder
     |-> constraints --> constraints_file.sdc
     
     |-> lef_files --> header6_V55.lef
-                  --> fsa0m_a_generic_core.lef + FSA0M_A_GENERIC_CORE_ANT_V55.6.lef
+                  --> fsa0m_a_generic_core.lef      + FSA0M_A_GENERIC_CORE_ANT_V55.6.lef
                   --> foa0a_o_t33_generic_cd_io.lef + FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef
     
-    |-> 
+    |-> genus --> 
     
-    |->
+    
+    |-> innovus --> 
 
 ## Before invoking Cadence tools
 Run the following commands
