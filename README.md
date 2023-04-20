@@ -46,15 +46,15 @@ elaborate ${basename}
 read_sdc ../constraints/constraints_file.sdc                //Constraint file (.sdc)
 
 synthesize -to_mapped
-report timing > ${basename}_${runname}_timing.rpt
-report gates > ${basename}_${runname}_cell.rpt
-report power > ${basename}_${runname}_power.rpt
-report area  > ${basename}_${runname}_area.rpt
+report timing > ${basename}_${runname}_timing.rpt           //Output file
+report gates > ${basename}_${runname}_cell.rpt              //Output file
+report power > ${basename}_${runname}_power.rpt             //Output file
+report area  > ${basename}_${runname}_area.rpt              //Output file
 
-write_hdl -mapped > ${basename}_${runname}.v
-write_sdc > ${basename}_${runname}.sdc
-write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf
-gui_show
+write_hdl -mapped > ${basename}_${runname}.v                //Generated library mapped netlist
+write_sdc > ${basename}_${runname}.sdc                      //?????????????
+write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf  //????????????????
+gui_show                                                    //To show result in GUI mode
 
 ```
 
