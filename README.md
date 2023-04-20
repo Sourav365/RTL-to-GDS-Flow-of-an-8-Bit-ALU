@@ -9,6 +9,21 @@ VLSI Backend Design Flow / Physical Design Based on Cadence-tools
 
 ## Required Folders and files
 
+Main_Design_Folder
+
+    |-> rtl --> verilog_code.v
+            --> test_bench.v
+           
+    |-> tcl --> tcl_file.tcl
+           
+    |-> lib --> generic_core
+            --> generic_core_tt
+            --> generic_core_ff
+            --> generic_core_ss
+            
+    |->
+    
+    |->
 
 ## Before invoking Cadence tools
 Run the following commands
