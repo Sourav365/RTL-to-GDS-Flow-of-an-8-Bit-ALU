@@ -78,3 +78,20 @@ source .cdsbashrc
 4. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
 
 
+
+
+
+## Steps---->
+0. Start Cadence tools
+```cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
+source .cdsbashrc
+```
+1. Verify RTL design
+
+
+2. Generate Netlist after synthesys
+
+
+4. fdg
+5. dfg
+6. dfg
