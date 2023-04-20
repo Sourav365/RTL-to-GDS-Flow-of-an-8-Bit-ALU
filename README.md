@@ -7,6 +7,9 @@ VLSI Backend Design Flow / Physical Design Based on Cadence-tools
 2. Genus	-> Synthesize RTL code
 3. Innovus	-> Placement & Routing
 
+## Required Folders and files
+
+
 ## Before invoking Cadence tools
 Run the following commands
 ```
