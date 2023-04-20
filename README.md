@@ -7,3 +7,20 @@ VLSI Backend Design Flow / Physical Design Based on Cadence-tools
 2. Genus	-> Synthesize RTL code
 3. Innovus	-> Placement & Routing
 
+## Before invoking Cadence tools
+Run the following commands
+```
+cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
+source .cdsbashrc
+```
+
+## To run a Cadence tool
+Go to design folder ```cd Sourav/alu_design_2/genus/```
+
+Open Genus CLI ```/Application/Cadence/GENUS201/bin/genus``` or directly ```genus```
+
+Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
+
+Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
+
+
