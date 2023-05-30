@@ -52,7 +52,7 @@ report power > ${basename}_${runname}_power.rpt            //Output file
 report area  > ${basename}_${runname}_area.rpt             //Output file
 
 write_hdl -mapped > ${basename}_${runname}.v               //Generated library mapped netlist
-write_sdc > ${basename}_${runname}.sdc                     //?????????????
+write_sdc > ${basename}_${runname}.sdc                     //Achieved Constraint file
 write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > delays.sdf  //????????????????
 gui_show                                                    //To show result in GUI mode
 
