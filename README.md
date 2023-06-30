@@ -136,7 +136,7 @@ set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
 /* 
  * It contains 2 parts
  * 1. Netlist module generated after Systhesys process (Using Genus)
- * 2. Pad integration IO module
+ * 2. IO Pad module
  */
 
 // 1. Netlist Module
@@ -147,7 +147,7 @@ set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
 /* endmodule */
 
 
-// 2. Pad Integration Module
+// 2. Top Module with IO Pad Module
 module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_code_in,clk_in, en_in);
 
 	input [7:0] A_in, B_in;
@@ -171,7 +171,8 @@ module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_
 	assign logic1=1'b1;
 	assign logic0=1'b0;
 	
-	///////////.....................INPUT DIGITAL PADS....////
+	/*********************** INPUT DIGITAL PADS ************************/
+	// input [7:0] A
 	XMC A0(.O(A_out[0]),.I(A_in[0]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC A1(.O(A_out[1]),.I(A_in[1]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC A2(.O(A_out[2]),.I(A_in[2]),.PU(logic1),.PD(logic1),.SMT(logic1));
@@ -180,7 +181,8 @@ module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_
 	XMC A5(.O(A_out[5]),.I(A_in[5]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC A6(.O(A_out[6]),.I(A_in[6]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC A7(.O(A_out[7]),.I(A_in[7]),.PU(logic1),.PD(logic1),.SMT(logic1));
-	
+
+	// input [7:0] B
 	XMC B0(.O(B_out[0]),.I(B_in[0]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC B1(.O(B_out[1]),.I(B_in[1]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC B2(.O(B_out[2]),.I(B_in[2]),.PU(logic1),.PD(logic1),.SMT(logic1));
@@ -189,12 +191,15 @@ module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_
 	XMC B5(.O(B_out[5]),.I(B_in[5]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC B6(.O(B_out[6]),.I(B_in[6]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC B7(.O(B_out[7]),.I(B_in[7]),.PU(logic1),.PD(logic1),.SMT(logic1));
-	
+
+	// input [2:0] op_code
 	XMC op_code0(.O(op_code_out[0]),.I(op_code_in[0]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC op_code1(.O(op_code_out[1]),.I(op_code_in[1]),.PU(logic1),.PD(logic1),.SMT(logic1));
 	XMC op_code2(.O(op_code_out[2]),.I(op_code_in[2]),.PU(logic1),.PD(logic1),.SMT(logic1));
-	
+
+	// input clk
 	XMC clk(.O(clk_out),.I(clk_in),.PU(logic1),.PD(logic1),.SMT(logic1));
+	// input en
 	XMC en(.O(en_out),.I(en_in),.PU(logic1),.PD(logic1),.SMT(logic1));
 	
 	//////////...................OUTPUT DIGITAL PADS....../////
