@@ -32,7 +32,7 @@ Main_Design_Folder
     
     |-> innovus --> alu_top_innovus.v (Netlist(core) + IO pads) (Innovus Top Module Verilog file)
                 --> pads_alu.io
-                --> alu_synthesys_report.sdc (Constraint file generated after synthesys inside genus folder)
+                --> alu_synthesys_report_innovus.sdc (Constraint file generated after synthesys inside genus folder modify the outputs according to innovus top module pins)
                 --> 
 
 ## RTL file (.v)
