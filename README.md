@@ -104,22 +104,22 @@ source .cdsbashrc
 
 
 
-## Steps---->
-### 0. Start Cadence tool & Write RTL Code
+# Steps---->
+## 0. Start Cadence tool & Write RTL Code
 ```
 cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
 source .cdsbashrc
 ```
-### 1. Verify RTL design
+## 1. Verify RTL design
 Use NCLaunch or NCSim or Xilinx Vivado tool to verify RTL code.
 
 Required files 
 1. verilog_code.v 
 2. test_bench.v
 
-### 2. Generate Netlist after synthesys
+## 2. Generate Netlist after synthesys
 
-#### Create Constraint File (.sdc)
+### Create Constraint File (.sdc)
 
 ```
 create_clock -name clk -period 10 -waveform {0 5} [get_ports "clk"]
@@ -138,7 +138,7 @@ set_output_delay -max 1.0 [get_ports "flag_carry"] -clock [get_clocks "clk"]
 set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
 ```
 
-#### Create TCL file (.tcl)
+### Create TCL file (.tcl)
 
 ```
 set_attribute lib_search_path {../lib/}                     //Library file path 
@@ -164,7 +164,7 @@ write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold
 gui_show                                                    //To show result in GUI mode
 
 ```
-#### Run commands for Synthesize
+### Run commands for Synthesize
 ```
 cd Sourav/alu_design_2/genus/
 /Application/Cadence/GENUS201/bin/genus -legacy_ui
@@ -181,7 +181,7 @@ Click on (+) tab to see schematic of the mapped netlist
 
 Technology mapped "Netlist" and "Constraint" file will be generated.
 
-### 3. Verify post Synthesys netlist
+## 3. Verify post Synthesys netlist
 Use NCLaunch or NCSim or Xilinx Vivado tool to verify Post Synthesized Netlist code.
 
 Required files 
@@ -189,9 +189,9 @@ Required files
 2. fsa0m_a_generic_core.v
 3. test_bench.v
 
-### 4. Generating 
+## 4. Placement & Routing 
 
-## Innovus Top Module Verilog file (.v)
+### Innovus Top Module Verilog file (.v)
 <img width="600" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/d8ecebcc-1b8a-45d8-9c53-7b4d2cb581d4">
 
 ```
@@ -289,7 +289,7 @@ endmodule
 
 ```
 
-## Pads IO file (.io)
+### Pads IO file (.io)
 
 ```
 (globals 
@@ -366,4 +366,10 @@ endmodule
 
 ```
 
-### 5. dfg
+### Create Constraint (.sdc) File for Layout
+Copy the output constraint file (.sdc) generated after synthesys. **Change the input output ports to the Top module port names**.
+
+```
+
+```
+## 5. dfg
