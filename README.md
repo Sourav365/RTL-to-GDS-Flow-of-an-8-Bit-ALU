@@ -131,6 +131,7 @@ set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
 ```
 
 ## Innovus Top Module Verilog file (.v)
+<img width="600" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/384f5dcc-2f45-4d2b-ba1b-6d11ee3fd1a4">
 
 ```
 /* 
@@ -140,7 +141,7 @@ set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
  */
 
 // 1. Netlist Module
-/* module alu (.................................................);   */
+/* module alu_netlist (.........................................);   */
 /*********************************************************************/
 /******************** INSERT NETLIST MODULE HERE *********************/
 /*********************************************************************/
@@ -201,8 +202,10 @@ module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_
 	XMC clk(.O(clk_out),.I(clk_in),.PU(logic1),.PD(logic1),.SMT(logic1));
 	// input en
 	XMC en(.O(en_out),.I(en_in),.PU(logic1),.PD(logic1),.SMT(logic1));
-	
-	//////////...................OUTPUT DIGITAL PADS....../////
+
+
+	/*********************** OUTPUT DIGITAL PADS ************************/
+	// output [7:0] result
 	YA2GSC result0(.I(result_out_temp[0]),.O(result_out_out[0]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
 	YA2GSC result1(.I(result_out_temp[1]),.O(result_out_out[1]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
 	YA2GSC result2(.I(result_out_temp[2]),.O(result_out_out[2]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
@@ -211,20 +214,17 @@ module alu_top_module(result_out_out,flag_carry_out, flag_zero_out,A_in,B_in,op_
 	YA2GSC result5(.I(result_out_temp[5]),.O(result_out_out[5]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
 	YA2GSC result6(.I(result_out_temp[6]),.O(result_out_out[6]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
 	YA2GSC result7(.I(result_out_temp[7]),.O(result_out_out[7]),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
-	
-	
+
+	// output flag_carry
 	YA2GSC flag_carry(.I(flag_carry_temp),.O(flag_carry_out),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
+	// output flag_zero
 	YA2GSC flag_zero(.I(flag_zero_temp),.O(flag_zero_out),.E(logic1),.E2(logic1),.E4(logic1),.SR(logic0));
 	
 	
-	///
-	alu top1(A_out, B_out, op_code_out, clk_out, en_out, result_out_temp, flag_carry_temp, flag_zero_temp);
+	/*********************** Call the Netlist Module ************************/
+	alu_netlist alu_core(.A(A_out), .B(B_out), .opcode(op_code_out), .clk(clk_out), .en(en_out), .result_out(result_out_temp), .flag_carry(flag_carry_temp), .flag_zero(flag_zero_temp));
 
 endmodule
-
-
-
-
 
 ```
 
