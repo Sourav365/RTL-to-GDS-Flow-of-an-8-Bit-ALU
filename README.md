@@ -30,7 +30,7 @@ Main_Design_Folder
     |-> genus --> <<Initially no files>>
     
     
-    |-> innovus --> alu_top_innovus.v (Netlist + Input output pads ) (Innovus Top Module Verilog file)
+    |-> innovus --> alu_top_innovus.v (Netlist(core) + IO pads) (Innovus Top Module Verilog file)
                 --> pads_alu.io
                 --> alu_synthesys_report.sdc (Constraint file generated after synthesys inside genus folder)
                 --> 
