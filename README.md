@@ -30,9 +30,9 @@ Main_Design_Folder
     |-> genus --> <<Initially no files>>
     
     
-    |-> innovus --> pads_alu.io
-                --> netlist_synthesys_report.v (Netlist file generated after synthesys inside genus)
-                --> alu_synthesys_report.sdc (Constraint file generated after synthesys inside genus)
+    |-> innovus --> alu_top_innovus.v (Netlist + Input output pads ) (Innovus Top Module Verilog file)
+                --> pads_alu.io
+                --> alu_synthesys_report.sdc (Constraint file generated after synthesys inside genus folder)
                 --> 
 
 ## RTL file (.v)
@@ -80,7 +80,6 @@ module alu(A,B,op_code,clk,en,result_out,flag_carry,flag_zero);
             endcase
         end
 		flag_zero=(result==0)?1:0;
-
 	end
 endmodule
 ```
@@ -129,6 +128,12 @@ set_input_delay -max 1.0 [get_ports "en"] -clock [get_clocks "clk"]
 set_output_delay -max 1.0 [get_ports "result_out"] -clock [get_clocks "clk"]
 set_output_delay -max 1.0 [get_ports "flag_carry"] -clock [get_clocks "clk"]
 set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
+```
+
+## Innovus Top Module Verilog file (.v)
+
+```
+/*************************
 ```
 
 ## Pads IO file (.io)
