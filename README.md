@@ -305,7 +305,6 @@ endmodule
 
 ```
 
-
 ## Before invoking Cadence tools
 Run the following commands
 ```
