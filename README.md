@@ -131,12 +131,12 @@ set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
 ```
 
 ## Innovus Top Module Verilog file (.v)
-<img width="600" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/384f5dcc-2f45-4d2b-ba1b-6d11ee3fd1a4">
+<img width="600" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/d8ecebcc-1b8a-45d8-9c53-7b4d2cb581d4">
 
 ```
 /* 
  * It contains 2 parts
- * 1. Netlist module generated after Systhesys process (Using Genus)
+ * 1. Core (Netlist module generated after Systhesys process (Using Genus))
  * 2. IO Pad module
  */
 
