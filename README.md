@@ -84,7 +84,61 @@ module alu(A,B,op_code,clk,en,result_out,flag_carry,flag_zero);
 endmodule
 ```
 
-## TCL file (.tcl)
+## Before invoking Cadence tools
+Run the following commands
+```
+cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
+source .cdsbashrc
+```
+
+## To run a Cadence tool
+(Go to design folder eg. ```cd Sourav/alu_design_2/genus/``` . Then invoke particular tool inside that tool-named-folder.)
+
+1. Open NCLaunch GUI ```.............``` or directly ```nclaunch &```
+
+2. Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
+
+3. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
+
+
+
+
+
+## Steps---->
+### 0. Start Cadence tool & Write RTL Code
+```
+cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
+source .cdsbashrc
+```
+### 1. Verify RTL design
+Use NCLaunch or NCSim or Xilinx Vivado tool to verify RTL code.
+
+Required files 
+1. verilog_code.v 
+2. test_bench.v
+
+### 2. Generate Netlist after synthesys
+
+#### Create Constraint File (.sdc)
+
+```
+create_clock -name clk -period 10 -waveform {0 5} [get_ports "clk"]
+set_clock_transition -rise 0.1 [get_clocks "clk"]
+set_clock_transition -fall 0.1 [get_clocks "clk"]
+set_clock_uncertainty 0.01 [get_ports "clk"]
+
+set_input_delay -max 1.0 [get_ports "A"] -clock [get_clocks "clk"]
+set_input_delay -max 1.0 [get_ports "B"] -clock [get_clocks "clk"]
+set_input_delay -max 1.0 [get_ports "op_code"] -clock [get_clocks "clk"]
+set_input_delay -max 1.0 [get_ports "en"] -clock [get_clocks "clk"]
+
+
+set_output_delay -max 1.0 [get_ports "result_out"] -clock [get_clocks "clk"]
+set_output_delay -max 1.0 [get_ports "flag_carry"] -clock [get_clocks "clk"]
+set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
+```
+
+#### Create TCL file (.tcl)
 
 ```
 set_attribute lib_search_path {../lib/}                     //Library file path 
@@ -110,25 +164,32 @@ write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold
 gui_show                                                    //To show result in GUI mode
 
 ```
-
-## Constraint File (.sdc)
-
+#### Run commands for Synthesize
 ```
-create_clock -name clk -period 10 -waveform {0 5} [get_ports "clk"]
-set_clock_transition -rise 0.1 [get_clocks "clk"]
-set_clock_transition -fall 0.1 [get_clocks "clk"]
-set_clock_uncertainty 0.01 [get_ports "clk"]
-
-set_input_delay -max 1.0 [get_ports "A"] -clock [get_clocks "clk"]
-set_input_delay -max 1.0 [get_ports "B"] -clock [get_clocks "clk"]
-set_input_delay -max 1.0 [get_ports "op_code"] -clock [get_clocks "clk"]
-set_input_delay -max 1.0 [get_ports "en"] -clock [get_clocks "clk"]
-
-
-set_output_delay -max 1.0 [get_ports "result_out"] -clock [get_clocks "clk"]
-set_output_delay -max 1.0 [get_ports "flag_carry"] -clock [get_clocks "clk"]
-set_output_delay -max 1.0 [get_ports "flag_zero"] -clock [get_clocks "clk"]
+cd Sourav/alu_design_2/genus/
+/Application/Cadence/GENUS201/bin/genus -legacy_ui
+source ../tcl/alu.tcl
 ```
+
+Click on (+) tab to see schematic of the mapped netlist
+
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/49667585/233337096-4447da17-22d9-4334-b84e-871d4fecc1db.png">
+
+<img width="487" alt="image" src="https://user-images.githubusercontent.com/49667585/233338045-02285a07-43e2-4274-8597-5bdbafb4bf9a.png">
+
+**Timing**, **Gates**, **Power**, **Area repports** will generate inside _../genus/_ folder.
+
+Technology mapped "Netlist" and "Constraint" file will be generated.
+
+### 3. Verify post Synthesys netlist
+Use NCLaunch or NCSim or Xilinx Vivado tool to verify Post Synthesized Netlist code.
+
+Required files 
+1. netlist_synthesys_report.v 
+2. fsa0m_a_generic_core.v
+3. test_bench.v
+
+### 4. Generating 
 
 ## Innovus Top Module Verilog file (.v)
 <img width="600" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/d8ecebcc-1b8a-45d8-9c53-7b4d2cb581d4">
@@ -304,66 +365,5 @@ endmodule
       )
 
 ```
-
-## Before invoking Cadence tools
-Run the following commands
-```
-cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
-source .cdsbashrc
-```
-
-## To run a Cadence tool
-(Go to design folder eg. ```cd Sourav/alu_design_2/genus/``` . Then invoke particular tool inside that tool-named-folder.)
-
-1. Open NCLaunch GUI ```.............``` or directly ```nclaunch &```
-
-2. Open Genus GUI ```/Application/Cadence/GENUS201/bin/genus -legacy_ui``` or directly ```genus -legacy_ui```
-
-3. Open innovus GUI ```/Application/Cadence/INNOVUS201/bin/innovus``` or directly ```innovus```
-
-
-
-
-
-## Steps---->
-### 0. Start Cadence tools
-```
-cd /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/
-source .cdsbashrc
-```
-### 1. Verify RTL design
-Use NCLaunch or NCSim or Xilinx Vivado tool to verify RTL code.
-
-Required files 
-1. verilog_code.v 
-2. test_bench.v
-
-### 2. Generate Netlist after synthesys
-```
-cd Sourav/alu_design_2/genus/
-/Application/Cadence/GENUS201/bin/genus -legacy_ui
-source ../tcl/alu.tcl
-```
-
-Click on (+) tab to see schematic of the mapped netlist
-
-<img width="250" alt="image" src="https://user-images.githubusercontent.com/49667585/233337096-4447da17-22d9-4334-b84e-871d4fecc1db.png">
-
-<img width="487" alt="image" src="https://user-images.githubusercontent.com/49667585/233338045-02285a07-43e2-4274-8597-5bdbafb4bf9a.png">
-
-**Timing**, **Gates**, **Power**, **Area repports** will generate inside _../genus/_ folder.
-
-Technology mapped "Netlist" and "Constraint" file will be generated.
-
-### 3. Verify post Synthesys netlist
-Use NCLaunch or NCSim or Xilinx Vivado tool to verify Post Synthesized Netlist code.
-
-Required files 
-1. netlist_synthesys_report.v 
-2. fsa0m_a_generic_core.v
-3. test_bench.v
-
-### 4. Generating 
-
 
 ### 5. dfg
