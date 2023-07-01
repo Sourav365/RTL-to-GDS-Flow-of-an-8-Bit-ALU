@@ -486,6 +486,7 @@ Select the extream sides nets and delete.
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/31f6cc70-5c7a-44a1-909c-cb696fd6b9b7">
 
 6. Connect Global Nets
+   To connect internal Power Global Nets to the Output pins.
    
 	```
 	clearGlobalNets
@@ -495,7 +496,8 @@ Select the extream sides nets and delete.
 	globalNetConnect VDDO -type tiehi
 	globalNetConnect GNDO -type tielo
 	```
-Using GUI
+ 
+  Using GUI
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/a12eb2d5-53d0-4a21-975e-124c154328d8">
 
@@ -506,23 +508,28 @@ Using GUI
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/e347964e-c609-43ac-ac66-167a79f23e4d">
 
 
-
-
 7. Place->std cells
+
+Placing standard cells to the design.
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/d9204528-2b42-42f3-8aba-b621b1b33250">
 
 
-8. Route -> Nano route -> Route
-
-<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/8c599ffe-9146-4061-a1fe-e065b6b636bf">
-
-9. To provide Horizontal strips
+8. To provide Horizontal strips
 	Route -> Special Route
+	(Shows the Global net connections)
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4674f704-7e32-47f0-95f9-b247cff6976b">
 
-
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/51d5fcad-5080-478b-848e-89d639debade">
 
-## 5. dfg
+9. Route -> Nano route -> Route
+  To reduce the DRC Violations.
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/32deace3-64a9-4cc3-b064-0b8a573b620e">
+
+
+## 5. Results
+
+
+
