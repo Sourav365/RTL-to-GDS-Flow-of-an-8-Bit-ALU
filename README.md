@@ -480,13 +480,13 @@ On the GUI screen do the followings
 
 5. Power -> Power planning -> Add Stripe -> Add VDD GND Vertical Power strips
 
-Select the extream sides nets and delete.
+   Select the extream sides nets and delete.
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/f0659ac9-128d-4190-86ef-bf12fb7b8d56">
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/31f6cc70-5c7a-44a1-909c-cb696fd6b9b7">
 
 6. Connect Global Nets
-   To connect internal Power Global Nets to the Output pins.
+   (To connect internal Power Global Nets to the Output pins)
    
 	```
 	clearGlobalNets
@@ -509,22 +509,21 @@ Select the extream sides nets and delete.
 
 
 7. Place->std cells
-
-Placing standard cells to the design.
+   (Placing standard cells to the design)
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/d9204528-2b42-42f3-8aba-b621b1b33250">
 
 
 8. To provide Horizontal strips
-	Route -> Special Route
-	(Shows the Global net connections)
+   Route -> Special Route
+   (Shows the Global net connections)
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4674f704-7e32-47f0-95f9-b247cff6976b">
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/51d5fcad-5080-478b-848e-89d639debade">
 
 9. Route -> Nano route -> Route
-  To reduce the DRC Violations.
+   (To reduce the DRC Violations)
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/32deace3-64a9-4cc3-b064-0b8a573b620e">
 
