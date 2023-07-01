@@ -423,9 +423,12 @@ set_clock_uncertainty -hold 0.01 [get_ports clk_in]
 
 ```
 
-We can also do without the IO pads as of now. Considering only the Core area. [Link](https://www.youtube.com/watch?v=odMKqvrAz3s)
+We can also do without the IO pads as of now. Considering only the Core area. So for this, required files are - [Link](https://www.youtube.com/watch?v=odMKqvrAz3s)
 
-Run the Innovus tool
+1. netlist.v (Generated after synthesys)
+2. constraint.sdc (Generated after synthesys)
+
+### Run the Innovus tool
 
 ```
 cd Sourav/alu_design_2/innovus
