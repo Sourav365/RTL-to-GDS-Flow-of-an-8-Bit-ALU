@@ -456,13 +456,27 @@ On the GUI screen do the followings
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/1bc5d4a5-d286-49c8-8c0b-27a4b5d58dcf">
 
-3. Floorplan -> Specify floor plan -> 
+2. Floorplan -> Specify floor plan -> 
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4fd07cb2-4c60-4ada-8b48-b281cefb8bb8">
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/c91cdfc0-d0d7-4954-ba60-e57d2890691b">
 
-4.
+3. Place -> Physical cell -> Add IO Filler -> EMPTY1C -> Top, Buttom, Left, Right
+   
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/9a628eef-3d0e-4c8f-bfb6-db693459f934">
 
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/915a70af-bfe7-4be4-a1e4-5ce89211e9fe">
+
+4. Power -> Power planning -> Add Ring -> Do all the followings
+
+   i) Top, Buttom => Metal1   Left, Right => Metal2
+   ii) Top, Buttom => Metal3   Left, Right => Metal4
+   iii) Top, Buttom => Metal5   Left, Right => Metal4
+   
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/09c667af-4fc6-4b2d-a791-3f751db4ea0f">
+
+5. 
 
 ## 5. dfg
