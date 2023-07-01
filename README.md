@@ -435,4 +435,34 @@ cd Sourav/alu_design_2/innovus
 /Application/Cadence/INNOVUS201/bin/innovus
 ```
 
+On the GUI screen do the followings
+
+1. File -> import Design
+   
+   Netlist -> Verilog files -> innovus_top_module.v
+   
+   Technology lib -> LEF Files ->
+   
+		i) FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef, FSA0M_A_GENERIC_CORE_ANT_V55.6.lef, foa0a_o_t33_generic_cd_io.lef, fsa0m_a_generic_core.lef, header6_V55.lef (If using Pads with core)
+  		ii) header6_V55.lef, FSA0M_A_GENERIC_CORE_ANT_V55.6.lef, fsa0m_a_generic_core.lef (If using only core)
+   
+	Power nets -> VDD VDDO
+
+	Ground Nets -> GND GNDO
+
+	Save the config.
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/eb62a8bc-b9ac-4c06-a7ea-b154dbb2fa27">
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/1bc5d4a5-d286-49c8-8c0b-27a4b5d58dcf">
+
+3. Floorplan -> Specify floor plan -> 
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4fd07cb2-4c60-4ada-8b48-b281cefb8bb8">
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/c91cdfc0-d0d7-4954-ba60-e57d2890691b">
+
+4.
+
+
 ## 5. dfg
