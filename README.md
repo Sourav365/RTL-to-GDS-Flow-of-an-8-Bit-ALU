@@ -474,9 +474,25 @@ On the GUI screen do the followings
    ii) Top, Buttom => Metal3   Left, Right => Metal4
    iii) Top, Buttom => Metal5   Left, Right => Metal4
    
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/423ed5fa-1227-468f-854b-05c350facc15">
 
-<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/09c667af-4fc6-4b2d-a791-3f751db4ea0f">
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4feefb94-73d3-4f85-8bad-25116c1b774e">
 
-5. 
+5. Power -> Power planning -> Add Stripe -> Add VDD GND Vertical Power strips
+
+Select the extream sides nets and delete.
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/f0659ac9-128d-4190-86ef-bf12fb7b8d56">
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/31f6cc70-5c7a-44a1-909c-cb696fd6b9b7">
+
+6. To provide Horizontal strips
+Route -> Special Route
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4674f704-7e32-47f0-95f9-b247cff6976b">
+
+<img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/521c0e4a-15ee-4bbc-9523-a4a962df48ca">
+
+7. 
+
 
 ## 5. dfg
