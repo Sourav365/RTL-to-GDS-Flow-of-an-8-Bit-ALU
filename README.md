@@ -485,14 +485,44 @@ Select the extream sides nets and delete.
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/f0659ac9-128d-4190-86ef-bf12fb7b8d56">
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/31f6cc70-5c7a-44a1-909c-cb696fd6b9b7">
 
-6. To provide Horizontal strips
+6. Connect Global Nets
+   
+```
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VCC -instanceBasename {} -override -verbose
+globalNetConnect GND -type pgpin -pin GND -instanceBasename {} -override -verbose
+
+globalNetConnect VDDO -type tiehi
+globalNetConnect GNDO -type tielo
+```
+Using GUI
+
+<img width="250" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/a12eb2d5-53d0-4a21-975e-124c154328d8">
+
+<img width="250" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/2fd4bd0c-5732-493c-a63f-c700565d9070">
+
+<img width="250" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/43c4a129-299a-48c3-849d-b727986beea9">
+
+<img width="250" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/e347964e-c609-43ac-ac66-167a79f23e4d">
+
+
+8. To provide Horizontal strips
 Route -> Special Route
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/4674f704-7e32-47f0-95f9-b247cff6976b">
 
 <img width="500" alt="image" src="https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/521c0e4a-15ee-4bbc-9523-a4a962df48ca">
 
-7. 
+7. Place->std cells
 
+![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/0cc9e91d-7403-44f8-9825-0d142ac20a6e)
+
+![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/f9a5f4ea-5e08-460a-8743-a5798e72d373)
+
+8. Route -> Nano route -> Route
+
+![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/911d36e2-d7ca-4d85-b5f2-8a1bce93b319)
+
+9. 
 
 ## 5. dfg
