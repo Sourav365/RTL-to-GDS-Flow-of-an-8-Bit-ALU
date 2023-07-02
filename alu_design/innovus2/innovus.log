@@ -1,0 +1,491 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+Options:	
+Date:		Sat Jul  1 14:47:51 2023
+Host:		AVLSI-PC22 (x86_64 w/Linux 2.6.32-431.el6.x86_64) (4cores*4cpus*Intel(R) Xeon(R) CPU X3450 @ 2.67GHz 8192KB)
+OS:		Red Hat Enterprise Linux Server release 6.5 (Santiago)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> save_global top_module_globals
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/foa0a_o_t33_generic_cd_io.lef ../lef_files/fsa0m_a_generic_core.lef ../lef_files/header6_V55.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ...
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 12, on token metal1.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 18, on token metal2.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 24, on token metal3.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 30, on token metal4.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 36, on token metal5.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 42, on token metal6.
+**ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/foa0a_o_t33_generic_cd_io.lef ../lef_files/fsa0m_a_generic_core.lef ../lef_files/header6_V55.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ...
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 12, on token metal1.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 18, on token metal2.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 24, on token metal3.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 30, on token metal4.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 36, on token metal5.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 42, on token metal6.
+**ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/foa0a_o_t33_generic_cd_io.lef ../lef_files/fsa0m_a_generic_core.lef ../lef_files/header6_V55.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ...
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 12, on token metal1.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 18, on token metal2.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 24, on token metal3.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 30, on token metal4.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 36, on token metal5.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 42, on token metal6.
+**ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/foa0a_o_t33_generic_cd_io.lef ../lef_files/fsa0m_a_generic_core.lef ../lef_files/header6_V55.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ...
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 12, on token metal1.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 18, on token metal2.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 24, on token metal3.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 30, on token metal4.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 36, on token metal5.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 42, on token metal6.
+**ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/foa0a_o_t33_generic_cd_io.lef ../lef_files/fsa0m_a_generic_core.lef ../lef_files/header6_V55.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef ...
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 12, on token metal1.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 18, on token metal2.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 24, on token metal3.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 30, on token metal4.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 36, on token metal5.
+ERROR (LEFPARS-1508): TYPE statement is a required statement in a LAYER and it is not defined. Error in file ../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef at line 42, on token metal6.
+**ERROR: (IMPLF-3):	Error found when processing LEF file '../lef_files/FOA0A_O_T33_GENERIC_CD_IO_ANT_V55.lef'. The subsequent file content is ignored. Refer to error messages above for details. Fix the errors, and restart 'Innovus' again.
+Type 'man IMPLF-3' for more detail.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPLF-26):	No technology information is defined in the first LEF file.
+Please rearrange the LEF file order and make sure the technology LEF file is the
+first one, exit and restart Innovus.
+**ERROR: (IMPSYT-16013):	Loading LEF file(s) failed, and has aborted. Refer to error messages above for details. Please exit the tools and fix the errors first, then re-load design again.
+<CMD> save_global Default.globals
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {../lef_files/header6_V55.lef ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/fsa0m_a_generic_core.lef}
+<CMD> set init_verilog alu_synthesys_report.v
+<CMD> set init_top_cell alu
+<CMD> set init_pwr_net VCC
+<CMD> init_design
+
+Loading LEF file ../lef_files/header6_V55.lef ...
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../lef_files/header6_V55.lef at line 1262.
+
+Loading LEF file ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ...
+**WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+Set DBUPerIGU to M2 pitch 620.
+**WARN: (IMPLF-44):	Macro 'AN2' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2B1' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2B1P' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2B1S' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2B1T' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2P' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2S' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN2T' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B1' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B1P' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B1S' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B1T' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B2' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B2P' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B2S' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3B2T' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3P' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3S' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (IMPLF-44):	Macro 'AN3T' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Innovus database and cannot be used in the
+netlist.
+**WARN: (EMS-27):	Message (IMPLF-44) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef at line 16495.
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef at line 16495.
+
+Loading LEF file ../lef_files/fsa0m_a_generic_core.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../lef_files/fsa0m_a_generic_core.lef at line 1.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ../lef_files/fsa0m_a_generic_core.lef at line 40071.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR4T' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR4T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I1' in macro 'XOR4T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I4' in macro 'XOR4T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I3' in macro 'XOR4T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR4S' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR4S' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I1' in macro 'XOR4S' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I4' in macro 'XOR4S' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I3' in macro 'XOR4S' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR4P' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR4P' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I1' in macro 'XOR4P' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I4' in macro 'XOR4P' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I3' in macro 'XOR4P' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR4' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR4' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I1' in macro 'XOR4' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I4' in macro 'XOR4' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I3' in macro 'XOR4' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR3T' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR3T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I1' in macro 'XOR3T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'I3' in macro 'XOR3T' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR3S' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'I2' in macro 'XOR3S' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR3P' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR3' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR2HT' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR2HS' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR2HP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XOR2H' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR4T' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR4S' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR4P' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR4' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR3T' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR3S' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR3P' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'O' in macro 'XNR3' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Sat Jul  1 14:56:30 2023
+viaInitial ends at Sat Jul  1 14:56:30 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=2.28min, fe_real=8.65min, fe_mem=688.4M) ***
+#% Begin Load netlist data ... (date=07/01 14:56:30, mem=552.1M)
+*** Begin netlist parsing (mem=688.4M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'alu_synthesys_report.v'
+
+*** Memory Usage v#1 (Current mem = 691.367M, initial mem = 274.980M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=691.4M) ***
+#% End Load netlist data ... (date=07/01 14:56:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=555.5M, current mem=555.5M)
+Set top cell to alu.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell alu ...
+*** Netlist is unique.
+** info: there are 396 modules.
+** info: there are 207 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 723.789M, initial mem = 274.980M) ***
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 0.93 in metal6 is different from 0.88 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restoreDesign -mmmc_file <viewDef.tcl> to add the timing setup information.
+Extraction setup Started 
+<CMD> set init_lef_file {../lef_files/FSA0M_A_GENERIC_CORE_ANT_V55.6.lef ../lef_files/fsa0m_a_generic_core.lef}
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+<CMD> gui_select -rect {-1.16800 -0.28600 2.92300 2.54700}
+<CMD> gui_select -rect {-1.16800 0.02900 12.46900 13.35200}
+<CMD> deselectAll
+<CMD> fit
+<CMD> fit
+<CMD> zoomIn
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> fit
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_5040 -r 0.888768312534 0.699987 30 30 30 30
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 0.93 in metal6 is different from 0.88 defined in technology file in preferred direction.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_5040 -r 0.888045540797 0.699418 25 25 25 25
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 0.93 in metal6 is different from 0.88 defined in technology file in preferred direction.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> uiSetTool ruler
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Sat Jul  1 15:05:00 2023
+  Total CPU time:     0:03:48
+  Total real time:    0:17:11
+  Peak memory (main): 772.40MB
+
+
+*** Memory Usage v#1 (Current mem = 934.516M, initial mem = 274.980M) ***
+*** Message Summary: 2150 warning(s), 20 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:48, real=0:17:09, mem=934.5M) ---

@@ -1,0 +1,2 @@
+define worklib /Design/MTECH/MTECH2021/EE_GRP11/Desktop/Cadence_22/Sourav/alu_design_2/innovus/INCA_libs/worklib
+include $CDS_INST_DIR/tools/inca/files/cds.lib
