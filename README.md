@@ -550,3 +550,15 @@ On the GUI screen do the followings
    Hold Analysis view -> Best_case
 
 2. Timing -> Report timing -> Pre-CTS -> Setup -> ok
+
+
+
+
+
+
+
+
+![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/46c4fc73-e3bc-4e38-bdf6-26fd314e3abe)
+
+![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/96cec987-1a37-455f-9457-3fad1eb49f42)
+
