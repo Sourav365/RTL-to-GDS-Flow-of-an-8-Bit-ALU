@@ -530,6 +530,23 @@ On the GUI screen do the followings
 
 ## 5. Results
 
+### 1. DRC Check 
+  Verify -> Verify DRC
 ![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/a512260e-5a97-4d08-a63d-eaf06c457d31)
 
+### 2. STA Analysis
+   1. Timing -> MMMC Browser
+   
+   Library Sets-> Max_timing=> ss library, Min_timing=> ff library
 
+   Delay Corners-> Max_delay=> Max_timing, Min_delay=> Min_timing
+
+   Constraint modes -> Add Top level constraint file at innovus (Constraint file for Layout)
+
+   Analysis View -> Worst_case => Max_delay, Best_case => Min_delay
+
+   Setup Analysis view -> Worst_case
+
+   Hold Analysis view -> Best_case
+
+2. Timing -> Report timing -> Pre-CTS -> Setup -> ok
