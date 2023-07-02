@@ -1,0 +1,1263 @@
+#------------------------------------------
+# Preview export LEF
+#
+#        Preview sub-version 4.4.3.72
+#
+# TECH LIB NAME: FSA0*
+# TECH FILE NAME: techfile.cds
+# PROCESS OPTION: 6m1t
+#  Thick metal: metal6
+#  nomal metal: metal1~metal5
+# DATE : 2005 11 11
+# Include 2Cut definition
+#------------------------------------------
+ 
+ 
+VERSION 5.5 ;
+#------------------------------------------
+# case sensitive
+NAMESCASESENSITIVE ON ;
+#------------------------------------------
+
+#------------------------------------------
+BUSBITCHARS "[]" ;
+NOWIREEXTENSIONATPIN ON ;
+#------------------------------------------
+
+
+#------------------------------------------
+# declaration of resolution
+UNITS
+    DATABASE MICRONS 1000  ;
+END UNITS
+MANUFACTURINGGRID 0.01 ;
+#------------------------------------------
+
+#------------------------------------------
+# declaration of overlap
+LAYER overlap
+    TYPE OVERLAP ;
+END overlap
+#------------------------------------------
+
+#------------------------------------------
+# declaration of non-routing layer
+#LAYER contact
+#    TYPE CUT ;
+#END contact
+#------------------------------------------
+
+#------------------------------------------
+# declaration of routing layer
+# Metal Capacitance values are all follow 0.18 process.
+LAYER metal1
+    TYPE ROUTING ;
+    WIDTH 0.240 ;
+    SPACING 0.240 ;
+    SPACING 0.280 RANGE 10 1000 ;
+    PITCH 0.5600 ;
+    OFFSET 0.28 ;
+    MAXWIDTH 20 ;
+    AREA 0.1764 ;
+    DIRECTION HORIZONTAL ;
+    CAPACITANCE CPERSQDIST 0.000661423 ;
+    RESISTANCE RPERSQ 0.0770000000 ;
+    THICKNESS 0.48 ;
+END metal1
+
+LAYER via
+    TYPE CUT ;
+    SPACING 0.28 ;
+END via
+
+LAYER metal2
+    TYPE ROUTING ;
+    WIDTH 0.280 ;
+    SPACING 0.280 ;
+    SPACING 0.320 RANGE 10 1000 ;
+    PITCH 0.6200 ;
+##    WIREEXTENSION 0.22 ;
+    OFFSET 0.31 ;
+    MAXWIDTH 20 ;
+    AREA 0.194 ;
+    DIRECTION VERTICAL ;
+    CAPACITANCE CPERSQDIST 0.000612583 ;
+    RESISTANCE RPERSQ 0.0620000000 ;
+    THICKNESS 0.58 ;
+END metal2
+
+LAYER via2
+    TYPE CUT ;
+    SPACING 0.28 ;
+END via2
+
+LAYER metal3
+    TYPE ROUTING ;
+    WIDTH 0.280 ;
+    SPACING 0.280 ;
+    SPACING 0.320 RANGE 10 1000 ;
+    PITCH 0.5600 ;
+##    WIREEXTENSION 0.22 ;
+    OFFSET 0.28 ;
+    MAXWIDTH 20 ;
+    AREA 0.194 ;
+    DIRECTION HORIZONTAL ;
+    CAPACITANCE CPERSQDIST 0.000670124 ;
+    RESISTANCE RPERSQ 0.0620000000 ;
+    THICKNESS 0.58 ;
+END metal3
+
+LAYER via3
+    TYPE CUT ;
+    SPACING 0.28 ;
+END via3
+
+LAYER metal4
+    TYPE ROUTING ;
+    WIDTH 0.280 ;
+    SPACING 0.280 ;
+    SPACING 0.320 RANGE 10 1000 ;
+    PITCH 0.6200 ;
+##    WIREEXTENSION 0.22 ;
+    OFFSET 0.31 ;
+    MAXWIDTH 20 ;
+    AREA 0.194 ;
+    DIRECTION VERTICAL ;
+    CAPACITANCE CPERSQDIST 0.000601234 ;
+    RESISTANCE RPERSQ 0.0620000000 ;
+    THICKNESS 0.58 ;
+END metal4
+
+LAYER via4
+    TYPE CUT ;
+    SPACING 0.28 ;
+END via4
+
+LAYER metal5
+    TYPE ROUTING ;
+    WIDTH 0.280 ;
+    SPACING 0.280 ;
+    SPACING 0.320 RANGE 10 1000 ;
+    PITCH 0.5600 ;
+##    WIREEXTENSION 0.22 ;
+    OFFSET 0.28 ;
+    MAXWIDTH 20 ;
+    AREA 0.194 ;
+    DIRECTION HORIZONTAL ;
+    CAPACITANCE CPERSQDIST 0.000580154 ;
+    RESISTANCE RPERSQ 0.0620000000 ;
+    THICKNESS 0.58 ;
+END metal5
+
+LAYER via5
+    TYPE CUT ;
+    SPACING 0.28 ;
+END via5
+
+LAYER metal6
+    TYPE ROUTING ;
+    WIDTH 0.440 ;
+    SPACING 0.440 ;
+    SPACING 0.600 RANGE 10 1000 ;
+    PITCH 0.8800 ;
+##    WIREEXTENSION 0.26 ;
+    OFFSET 0.31 ;
+    MAXWIDTH 20 ;
+    AREA 0.463 ;
+    DIRECTION VERTICAL ;
+    CAPACITANCE CPERSQDIST 0.000471209 ;
+    RESISTANCE RPERSQ 0.0410000000 ;
+    THICKNESS 0.86 ;
+END metal6
+#------------------------------------------
+
+#------------------------------------------
+# Define four direction default vias
+VIA VIA12_HH DEFAULT
+  LAYER metal2 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal1 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA12_HH
+VIA VIA12_HV DEFAULT
+  LAYER metal2 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal1 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA12_HV
+VIA VIA12_VH DEFAULT
+  LAYER metal2 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal1 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA12_VH
+VIA VIA12_VV DEFAULT
+  LAYER metal2 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal1 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA12_VV
+VIA VIA23_HH DEFAULT
+  LAYER metal2 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via2 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA23_HH
+VIA VIA23_HV DEFAULT
+  LAYER metal2 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via2 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA23_HV
+VIA VIA23_VH DEFAULT
+  LAYER metal2 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via2 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA23_VH
+VIA VIA23_VV DEFAULT
+  LAYER metal2 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via2 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA23_VV
+VIA VIA34_HH DEFAULT
+  LAYER metal4 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via3 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA34_HH
+VIA VIA34_HV DEFAULT
+  LAYER metal4 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via3 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA34_HV
+VIA VIA34_VH DEFAULT
+  LAYER metal4 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via3 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA34_VH
+VIA VIA34_VV DEFAULT
+  LAYER metal4 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via3 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal3 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA34_VV
+VIA VIA45_HH DEFAULT
+  LAYER metal4 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via4 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA45_HH
+VIA VIA45_HV DEFAULT
+  LAYER metal4 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  LAYER via4 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA45_HV
+VIA VIA45_VH DEFAULT
+  LAYER metal4 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via4 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA45_VH
+VIA VIA45_VV DEFAULT
+  LAYER metal4 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  LAYER via4 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA45_VV
+VIA VIA56_HH DEFAULT
+  LAYER metal6 ;
+        RECT -0.26 -0.22 0.26 0.22 ;
+  LAYER via5 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA56_HH
+VIA VIA56_HV DEFAULT
+  LAYER metal6 ;
+        RECT -0.26 -0.22 0.26 0.22 ;
+  LAYER via5 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA56_HV
+VIA VIA56_VH DEFAULT
+  LAYER metal6 ;
+        RECT -0.22 -0.26 0.22 0.26 ;
+  LAYER via5 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.22 -0.14 0.22 0.14 ;
+  RESISTANCE 6.5 ;
+END VIA56_VH
+VIA VIA56_VV DEFAULT
+  LAYER metal6 ;
+        RECT -0.22 -0.26 0.22 0.26 ;
+  LAYER via5 ;
+        RECT -0.14 -0.14 0.14 0.14 ;
+  LAYER metal5 ;
+        RECT -0.14 -0.22 0.14 0.22 ;
+  RESISTANCE 6.5 ;
+END VIA56_VV
+#------------------------------------------
+
+#------------------------------------------
+# Define Stack only default vias
+VIA VIA23_stack_HAMMER1 DEFAULT TOPOFSTACKONLY
+    LAYER metal2 ;
+	 RECT -0.14 -0.48 0.14 0.22 ;
+    LAYER via2 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA23_stack_HAMMER1
+VIA VIA23_stack_HAMMER2 DEFAULT TOPOFSTACKONLY
+    LAYER metal2 ;
+	 RECT -0.14 -0.22 0.14 0.48 ;
+    LAYER via2 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA23_stack_HAMMER2
+VIA VIA23_stack_CROSS DEFAULT TOPOFSTACKONLY
+    LAYER metal2 ;
+	 RECT -0.14 -0.35 0.14 0.35 ;
+    LAYER via2 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA23_stack_CROSS
+VIA VIA34_stack_HAMMER1 DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	   RECT -0.14 -0.22 0.14 0.22 ;
+    LAYER via3 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.48 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA34_stack_HAMMER1
+VIA VIA34_stack_HAMMER2 DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	   RECT -0.14 -0.22 0.14 0.22 ;
+    LAYER via3 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.22 -0.14 0.48 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA34_stack_HAMMER2
+VIA VIA34_stack_CROSS DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	   RECT -0.14 -0.22 0.14 0.22 ;
+    LAYER via3 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal3 ;
+	   RECT -0.35 -0.14 0.35 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA34_stack_CROSS
+VIA VIA45_stack_HAMMER1 DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	 RECT -0.14 -0.48 0.14 0.22 ;
+    LAYER via4 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA45_stack_HAMMER1
+VIA VIA45_stack_HAMMER2 DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	 RECT -0.14 -0.22 0.14 0.48 ;
+    LAYER via4 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA45_stack_HAMMER2
+VIA VIA45_stack_CROSS DEFAULT TOPOFSTACKONLY
+    LAYER metal4 ;
+	 RECT -0.14 -0.35 0.14 0.35 ;
+    LAYER via4 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.22 -0.14 0.22 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA45_stack_CROSS
+VIA VIA56_stack_HAMMER1 DEFAULT TOPOFSTACKONLY
+    LAYER metal6 ;
+	   RECT -0.22 -0.26 0.22 0.26 ;
+    LAYER via5 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.44 -0.14 0.26 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA56_stack_HAMMER1
+VIA VIA56_stack_HAMMER2 DEFAULT TOPOFSTACKONLY
+    LAYER metal6 ;
+	   RECT -0.22 -0.26 0.22 0.26 ;
+    LAYER via5 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.26 -0.14 0.44 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA56_stack_HAMMER2
+VIA VIA56_stack_CROSS DEFAULT TOPOFSTACKONLY
+    LAYER metal6 ;
+	   RECT -0.22 -0.26 0.22 0.26 ;
+    LAYER via5 ;
+	   RECT -0.14 -0.14 0.14 0.14 ;
+    LAYER metal5 ;
+	   RECT -0.35 -0.14 0.35 0.14 ;
+    RESISTANCE 6.50 ;
+END VIA56_stack_CROSS
+#------------------------------------------
+
+
+#------------------------------------------
+# define via rules for via usage
+# while invoking SROUTE, ADD WIRE, or MOVE WIRE command
+
+# vias generated from signal via rules
+
+VIA VIA12_HH_2cut_E DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_E
+VIA VIA12_HH_2cut_W DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_W
+VIA VIA12_HH_2cut_N DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_N
+VIA VIA12_HH_2cut_S DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_S
+VIA VIA12_HH_2cut_alt_E DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_alt_E
+VIA VIA12_HH_2cut_alt_W DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_alt_W
+VIA VIA12_HH_2cut_alt_N DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal2 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_alt_N
+VIA VIA12_HH_2cut_alt_S DEFAULT 
+    LAYER metal1 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    LAYER via ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal2 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA12_HH_2cut_alt_S
+VIA VIA23_HH_mar_N DEFAULT  TOPOFSTACKONLY
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.220000 0.310000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA23_HH_mar_N
+VIA VIA23_HH_mar_S DEFAULT  TOPOFSTACKONLY
+    LAYER metal2 ; 
+	RECT -0.220000 -0.310000 0.220000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA23_HH_mar_S
+VIA VIA23_HH_2cut_E DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_E
+VIA VIA23_HH_2cut_W DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_W
+VIA VIA23_HH_2cut_N DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_N
+VIA VIA23_HH_2cut_S DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_S
+VIA VIA23_HH_2cut_alt_E DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_alt_E
+VIA VIA23_HH_2cut_alt_W DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via2 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_alt_W
+VIA VIA23_HH_2cut_alt_N DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal3 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_alt_N
+VIA VIA23_HH_2cut_alt_S DEFAULT 
+    LAYER metal2 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    LAYER via2 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal3 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA23_HH_2cut_alt_S
+VIA VIA34_HH_mar_E DEFAULT  TOPOFSTACKONLY
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.480000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA34_HH_mar_E
+VIA VIA34_HH_mar_W DEFAULT  TOPOFSTACKONLY
+    LAYER metal3 ; 
+	RECT -0.480000 -0.140000 0.220000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA34_HH_mar_W
+VIA VIA34_HH_2cut_E DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_E
+VIA VIA34_HH_2cut_W DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_W
+VIA VIA34_HH_2cut_N DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_N
+VIA VIA34_HH_2cut_S DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_S
+VIA VIA34_HH_2cut_alt_E DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_alt_E
+VIA VIA34_HH_2cut_alt_W DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via3 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_alt_W
+VIA VIA34_HH_2cut_alt_N DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal4 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_alt_N
+VIA VIA34_HH_2cut_alt_S DEFAULT 
+    LAYER metal3 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    LAYER via3 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal4 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA34_HH_2cut_alt_S
+VIA VIA45_HH_mar_N DEFAULT  TOPOFSTACKONLY
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.220000 0.310000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA45_HH_mar_N
+VIA VIA45_HH_mar_S DEFAULT  TOPOFSTACKONLY
+    LAYER metal4 ; 
+	RECT -0.220000 -0.310000 0.220000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 6.500000 ;
+END VIA45_HH_mar_S
+VIA VIA45_HH_2cut_E DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_E
+VIA VIA45_HH_2cut_W DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_W
+VIA VIA45_HH_2cut_N DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_N
+VIA VIA45_HH_2cut_S DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_S
+VIA VIA45_HH_2cut_alt_E DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_alt_E
+VIA VIA45_HH_2cut_alt_W DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via4 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_alt_W
+VIA VIA45_HH_2cut_alt_N DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal5 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_alt_N
+VIA VIA45_HH_2cut_alt_S DEFAULT 
+    LAYER metal4 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    LAYER via4 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal5 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA45_HH_2cut_alt_S
+VIA VIA56_HH_mar_E DEFAULT  TOPOFSTACKONLY
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.480000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.220000 0.260000 0.220000 ;
+    RESISTANCE 6.500000 ;
+END VIA56_HH_mar_E
+VIA VIA56_HH_mar_W DEFAULT  TOPOFSTACKONLY
+    LAYER metal5 ; 
+	RECT -0.480000 -0.140000 0.220000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.220000 0.260000 0.220000 ;
+    RESISTANCE 6.500000 ;
+END VIA56_HH_mar_W
+VIA VIA56_HH_2cut_E DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.220000 0.820000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_E
+VIA VIA56_HH_2cut_W DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.820000 -0.220000 0.260000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_W
+VIA VIA56_HH_2cut_N DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.220000 0.700000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.220000 0.260000 0.780000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_N
+VIA VIA56_HH_2cut_S DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.220000 -0.700000 0.220000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.780000 0.260000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_S
+VIA VIA56_HH_2cut_alt_E DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.220000 -0.140000 0.780000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT 0.420000 -0.140000 0.700000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.260000 -0.220000 0.820000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_alt_E
+VIA VIA56_HH_2cut_alt_W DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.780000 -0.140000 0.220000 0.140000 ;
+    LAYER via5 ; 
+	RECT -0.700000 -0.140000 -0.420000 0.140000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.820000 -0.220000 0.260000 0.220000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_alt_W
+VIA VIA56_HH_2cut_alt_N DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.140000 -0.220000 0.140000 0.780000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+	RECT -0.140000 0.420000 0.140000 0.700000 ;
+    LAYER metal6 ; 
+	RECT -0.220000 -0.260000 0.220000 0.820000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_alt_N
+VIA VIA56_HH_2cut_alt_S DEFAULT 
+    LAYER metal5 ; 
+	RECT -0.140000 -0.780000 0.140000 0.220000 ;
+    LAYER via5 ; 
+	RECT -0.140000 -0.700000 0.140000 -0.420000 ;
+	RECT -0.140000 -0.140000 0.140000 0.140000 ;
+    LAYER metal6 ; 
+	RECT -0.220000 -0.820000 0.220000 0.260000 ;
+    RESISTANCE 3.250000 ;
+END VIA56_HH_2cut_alt_S
+
+# end auto generated vias
+
+VIARULE VIAM1M2A
+   LAYER metal1 ;
+      DIRECTION HORIZONTAL ;
+      WIDTH 0.240 to 0.240 ;
+   LAYER metal2 ;
+      DIRECTION VERTICAL ;
+      WIDTH 0.280 to 0.280 ;
+   VIA VIA12_HH ;
+   VIA VIA12_HV ;
+   VIA VIA12_VH ;
+   VIA VIA12_VV ;
+END VIAM1M2A
+
+VIARULE VIAM2M3
+   LAYER metal2 ;
+      DIRECTION VERTICAL ;
+      WIDTH 0.280 to 0.280 ;
+   LAYER metal3 ;
+      DIRECTION HORIZONTAL ;
+      WIDTH 0.280 to 0.280 ;
+   VIA VIA23_HH ;
+   VIA VIA23_HV ;
+   VIA VIA23_VH ;
+   VIA VIA23_VV ;
+END VIAM2M3
+
+VIARULE VIAM3M4
+   LAYER metal3 ;
+      DIRECTION HORIZONTAL ;
+      WIDTH 0.280 to 0.280 ;
+   LAYER metal4 ;
+      DIRECTION VERTICAL ;
+      WIDTH 0.280 to 0.280 ;
+   VIA VIA34_HH ;
+   VIA VIA34_HV ;
+   VIA VIA34_VH ;
+   VIA VIA34_VV ;
+END VIAM3M4
+
+VIARULE VIAM4M5
+   LAYER metal4 ;
+      DIRECTION VERTICAL ;
+      WIDTH 0.280 to 0.280 ;
+   LAYER metal5 ;
+      DIRECTION HORIZONTAL ;
+      WIDTH 0.280 to 0.280 ;
+   VIA VIA45_HH ;
+   VIA VIA45_HV ;
+   VIA VIA45_VH ;
+   VIA VIA45_VV ;
+END VIAM4M5
+
+VIARULE VIAM5M6
+   LAYER metal5 ;
+      DIRECTION HORIZONTAL ;
+      WIDTH 0.280 to 0.280 ;
+   LAYER metal6 ;
+      DIRECTION VERTICAL ;
+      WIDTH 0.440 to 0.440 ;
+   VIA VIA56_HH ;
+   VIA VIA56_HV ;
+   VIA VIA56_VH ;
+   VIA VIA56_VV ;
+END VIAM5M6
+#------------------------------------------
+
+
+#------------------------------------------
+# turn via rules fill in the corner area at the intersection
+# between two speial wires at the same layer, where each wire
+# must be extended by half the width of the other wire.
+
+#viarule turn1 generate
+#   layer metal1 ;
+#   direction horizontal ;
+#   layer metal1 ;
+#   direction vertical ;
+#end turn1
+#
+#viarule turn2 generate
+#   layer metal2 ;
+#   direction horizontal ;
+#   layer metal2 ;
+#   direction vertical ;
+#end turn2
+#
+#viarule turn3 generate
+#   layer metal3 ;
+#   direction horizontal ;
+#   layer metal3 ;
+#   direction vertical ;
+#end turn3
+#
+#viarule turn4 generate
+#   layer metal4 ;
+#   direction horizontal ;
+#   layer metal4 ;
+#   direction vertical ;
+#end turn4
+#
+#viarule turn5 generate
+#   layer metal5 ;
+#   direction horizontal ;
+#   layer metal5 ;
+#   direction vertical ;
+#end turn5
+#
+#viarule turn6 generate
+#   layer metal6 ;
+#   direction horizontal ;
+#   layer metal6 ;
+#   direction vertical ;
+#end turn6
+#------------------------------------------
+
+#------------------------------------------
+# define the a formula of via array generation
+viarule genm1m2a generate
+   layer metal1 ;
+      width 0.01 to 9.99 ;
+      enclosure 0.08 0 ;
+   layer metal2 ;
+      enclosure 0.08 0 ;
+   layer via ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm1m2a
+
+viarule genm1m2b generate
+   layer metal1 ;
+      width 10.00 to 999.0 ;
+      enclosure 0.2 0.2 ;
+   layer metal2 ;
+      enclosure 0.08 0 ;
+   layer via ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm1m2b
+
+viarule genm2m3a generate
+   layer metal2 ;
+      width 0.01 to 9.99 ;
+      enclosure 0.08 0 ;
+   layer metal3 ;
+      enclosure 0.08 0 ;
+   layer via2 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm2m3a
+
+viarule genm2m3b generate
+   layer metal2 ;
+      width 10.00 to 999.0 ;
+      enclosure 0.2 0.2 ;
+   layer metal3 ;
+      enclosure 0.08 0 ;
+   layer via2 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm2m3b
+
+viarule genm3m4a generate
+   layer metal3 ;
+      width 0.01 to 9.99 ;
+      enclosure 0.08 0 ;
+   layer metal4 ;
+      enclosure 0.08 0 ;
+   layer via3 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm3m4a
+
+viarule genm3m4b generate
+   layer metal3 ;
+      width 10.00 to 999.0 ;
+      enclosure 0.2 0.2 ;
+   layer metal4 ;
+      enclosure 0.08 0 ;
+   layer via3 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm3m4b
+
+viarule genm4m5a generate
+   layer metal4 ;
+      width 0.01 to 9.99 ;
+      enclosure 0.08 0 ;
+   layer metal5 ;
+      enclosure 0.08 0 ;
+   layer via4 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm4m5a
+
+viarule genm4m5b generate
+   layer metal4 ;
+      width 10.00 to 999.0 ;
+      enclosure 0.2 0.2 ;
+   layer metal5 ;
+      enclosure 0.08 0 ;
+   layer via4 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm4m5b
+
+viarule genm5m6a generate
+   layer metal5 ;
+      width 0.01 to 9.99 ;
+      enclosure 0.08 0 ;
+   layer metal6 ;
+      enclosure 0.12 0.12 ;
+   layer via5 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm5m6a
+
+viarule genm5m6b generate
+   layer metal5 ;
+      width 10.00 to 999.0 ;
+      enclosure 0.2 0.2 ;
+   layer metal6 ;
+      enclosure 0.12 0.12 ;
+   layer via5 ;
+      rect -0.140 -0.140 0.140 0.140 ;
+      spacing 0.560 by 0.560 ;
+end genm5m6b
+
+#------------------------------------------
+
+#------------------------------------------
+# define the samenet spacing table gives the samenet
+# spacing rule
+#SPACING
+#   SAMENET contact via 0 stack ;
+#   SAMENET metal1 metal1 0.24 stack ;
+#   SAMENET via via 0.28 ;
+#   SAMENET metal2 metal2 0.28 stack ;
+#   SAMENET via via2 0 stack ;
+#   SAMENET via2 via2 0.28 ;
+#   SAMENET metal3 metal3 0.28 stack ;
+#   SAMENET via2 via3 0 stack ;
+#   SAMENET via3 via3 0.28 ;
+#   SAMENET metal4 metal4 0.28 stack ;
+#   SAMENET via3 via4 0 stack ;
+#   SAMENET via4 via4 0.28 ;
+#   SAMENET metal5 metal5 0.28 stack ;
+#   SAMENET via4 via5 0 stack ;
+#   SAMENET via5 via5 0.28 ;
+#   SAMENET metal6 metal6 0.44 ;
+#END SPACING
+#------------------------------------------
+
+#------------------------------------------
+# site definition for P&R
+SITE core_5040
+    SYMMETRY y ;
+    CLASS CORE  ;
+    SIZE 0.620 BY 5.04 ;
+END core_5040
+
+SITE iocore_a
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 347.200 ;
+END iocore_a
+
+SITE iocore_b
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 225.680 ;
+END iocore_b
+
+SITE iocore_c
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 235.6 ;
+END iocore_c
+
+SITE iocore_d
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 140.12 ;
+END iocore_d
+
+SITE iocore_cs
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 262.26 ;
+END iocore_cs
+
+SITE iocore_ds
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 156.24 ;
+END iocore_ds
+
+SITE iocore_e
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 147.56 ;
+END iocore_e
+
+SITE iocore_f
+    SYMMETRY y ;
+    CLASS PAD  ;
+    SIZE 0.620 BY 86.18 ;
+END iocore_f
+
+#------------------------------------------
+
+END LIBRARY
+
