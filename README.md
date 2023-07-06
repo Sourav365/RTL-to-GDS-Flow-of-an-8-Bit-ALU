@@ -7,6 +7,9 @@ VLSI Backend Design Flow / Physical Design Based on Cadence-tools
 2. Genus	-> Synthesize RTL code
 3. Innovus	-> Placement & Routing
 
+## Library Folder Path
+```/Application/Cadence/CadencePDK/UMC_180_nm_Sansh/UMC_180_libraries/umc_180nm_UMC_180_G-01-MIXED_MODE-RFCMOS18-1.8V-3.3V-1P6M-MMC_Faraday-IP/umc_180nm_library_cells```
+
 ## Required Folders and files
 
 Main_Design_Folder
