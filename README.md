@@ -565,3 +565,5 @@ On the GUI screen do the followings
 
 ![image](https://github.com/Sourav365/VLSI-Backend-Design-Flow-Based-on-Cadence-tools/assets/49667585/96cec987-1a37-455f-9457-3fad1eb49f42)
 
+
+**Power Delivery Network :** Power Grid = Power Ring + Power Strip + Power rails
